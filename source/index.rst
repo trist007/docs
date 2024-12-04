@@ -18,6 +18,14 @@ documentation for details.
 .. note::
    This documentation is currently under active development
 
-.. note::
-   GDB: if you get During startup program terminated with signal SIGKILL, Killed
+   GDB
+   ###
+   if you get During startup program terminated with signal SIGKILL, Killed
    gdb: set startup-with-shell off
+
+   C++
+   ###
+   cannot do in-class data member initialization
+.. code-block:: cpp
+
+   "SQLite::Database db{"../darkterminal.db", SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE};"
