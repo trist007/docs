@@ -17,12 +17,24 @@ release = '0.1'
 extensions = []
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ['sphinx_rtd_theme']
+
+import sphinx_rtd_theme
 
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'logo_only' : True,
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'includehidden': True,
+    'navigation_depth': 4,
+    'titles_only': False
+}
+
 html_static_path = ['_static']

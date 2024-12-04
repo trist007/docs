@@ -15,9 +15,10 @@ documentation for details.
    :maxdepth: 2
    :caption: Contents:
 
+   gdb
+   cpp
+
 .. note::
    This documentation is currently under active development
 
-.. note::
-   GDB: if you get During startup program terminated with signal SIGKILL, Killed
-   gdb: set startup-with-shell off
+
