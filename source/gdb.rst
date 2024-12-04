@@ -2,5 +2,8 @@
 GDB
 ####
 
-if you get During startup program terminated with signal SIGKILL, Killed
-gdb: set startup-with-shell off
+* if you get During startup program terminated with signal SIGKILL, Killed
+
+..  code-block:: cpp
+    
+    gdb: set startup-with-shell off
