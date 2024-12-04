@@ -7,3 +7,6 @@ GDB
 ..  code-block:: cpp
     
     gdb: set startup-with-shell off
+
+2nd collapsible header
+-----------------------------------------------------
