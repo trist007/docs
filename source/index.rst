@@ -16,6 +16,7 @@ documentation for details.
    :caption: Contents:
 
    gdb
+   cmake
    cpp
 
 .. note::
