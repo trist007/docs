@@ -13,6 +13,7 @@ CMake build options
 -----------------------------------------------------
 
 * Specify a specific compiler
+
 .. code-block:: cpp
 
     cmake -DCMAKE_CXX_COMPILER=/usr/bin/clang++
