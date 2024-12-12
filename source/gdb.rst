@@ -1,4 +1,7 @@
 
+.. image:: images/gdb-logo.png
+   :width: 100
+
 GDB
 ####
 

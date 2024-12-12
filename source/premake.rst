@@ -1,4 +1,7 @@
 
+.. image:: images/premake-logo.png
+   :width: 100
+
 Premake
 ########
 
