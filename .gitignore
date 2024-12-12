@@ -1,4 +1,6 @@
 *
 .gitignore
 !Makefile
-!source/*
+!source/
+!source/images/
+!source/images/*

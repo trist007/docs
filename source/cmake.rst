@@ -1,3 +1,7 @@
+
+.. image:: images/cmake-logo.jpg
+   :width: 100
+
 CMake
 ######
 
