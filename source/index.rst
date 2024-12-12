@@ -16,12 +16,12 @@ documentation for details.
    :caption: Contents:
 
    gdb
-   llvm
+   lldb
+   assembly
    c
    cpp
    cmake
    premake
-   assembly
 
 .. note::
    This documentation is currently under active development

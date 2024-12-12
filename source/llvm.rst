@@ -1,6 +1,0 @@
-
-LLVM
-#####
-
-* LLVM  tips
-
