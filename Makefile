@@ -18,3 +18,7 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+push:
+	rsync -rvaz build/html/* darkterminal.net:/data/www/html/darkterminal.net/docs/
+	#scp -r build/html/* darkterminal.net:/data/www/html/darkterminal.net/docs/

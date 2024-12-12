@@ -2,4 +2,5 @@
 Premake
 ########
 
-* Premake tips
+* Premake is easier to use than CMake as it supports LUA
+
