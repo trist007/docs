@@ -5,88 +5,98 @@
 Git
 ###
 
-: find a file
-git log --all -- <file> which will return commits
-git branch -a --contains <commit>
+* find a file::
 
-: default branch
-git config --global init.defaultBranch main
+    git log --all -- <file> which will return commits
+    git branch -a --contains <commit>
 
-: cannot push to a remote branch that is currently checked out unless you have
-git config receive.denyCurrentBranch updateInstead
+* default branch::
 
-otherwise create bare repo with git init --bare  //but can't check out branch it's like github
+    git config --global init.defaultBranch main
 
-: remove a file or modify it in an old commit
-git rebase -i HEAD~3 // make sure you have an extra commit older than you want to modify
+* cannot push to a remote branch that is currently checked out unless you have::
 
-in the interactive screen choose edit on the commit you want to edit
-then remove the file git rm --cached or modify file
-git add it and git commit --amend
+    git config receive.denyCurrentBranch updateInstead
+    otherwise create bare repo with git init --bare  //but can't check out branch it's like github
 
-git rebase --continue
+* remove a file or modify it in an old commit::
 
-if you have plenty comits use filter-branch or filter-repo
+    git rebase -i HEAD~3 // make sure you have an extra commit older than you want to modify
 
-git filter-branch --force -- index-filter 'git rm --cached --ignore-unmatch path/to/file' --prune-empty --tag-name-filter cat -- --all
+    in the interactive screen choose edit on the commit you want to edit
+    then remove the file git rm --cached or modify file
 
-git filter-repo --path path/to/file -- invert-paths
+    git add it and git commit --amend
+    git rebase --continue
 
-git push --force --all
+    if you have plenty comits use filter-branch or filter-repo
 
-: commit hash color
-git config diff.color.commit <your color>
+    git filter-branch --force -- index-filter 'git rm --cached --ignore-unmatch path/to/file' --prune-empty --tag-name-filter cat -- --all
+    git filter-repo --path path/to/file -- invert-paths
+    git push --force --all
 
-: git submodules
-in .gitmodules file
+* commit hash color::
 
-[submodule "trantor"]
-        path = trantor
-        url = https://github.com/an-tao/trantor.git
-        branch = master
+    git config diff.color.commit <your color>
 
-[submodule "DOMPurify"]
-        path = DOMPurify
-        url = https://github.com/cure53/DOMpurify.git
-        branch = master
+* git submodules::
 
-update modules with
-git submodule update
-cd submodule
-git pull
-or
-git submodule foreach git pull origin master
-or git submodule update --remote --merge
+    in .gitmodules file
 
-git submodule status
-git submodule add https://github.com/cure53/DOMPurify.git DOMPurify
+    [submodule "trantor"]
+            path = trantor
+            url = https://github.com/an-tao/trantor.git
+            branch = master
 
-: tags
-git tag -a release-v1.0
-git push origin tag release-v1.0
+    [submodule "DOMPurify"]
+            path = DOMPurify
+            url = https://github.com/cure53/DOMpurify.git
+            branch = master
 
-: remove an old commit and git rebase
-You can try with git rebase -i.
+    update modules with
+    git submodule update
+    cd submodule
+    git pull
+    or
+    git submodule foreach git pull origin master
+    or git submodule update --remote --merge
 
-Following the example you used in your question and assuming A is in the remote repo but B, C, D and E are not, after using git rebase you will get an screen like this:
+    git submodule status
+    git submodule add https://github.com/cure53/DOMPurify.git DOMPurify
 
-pick 67a8df7 B
-pick 47a6947 C
-pick a55540f D
-pick 68b51d5 E
-Then you will need to edit commit E line like this:
+* tags::
 
-pick 67a8df7 B
-pick 47a6947 C
-pick a55540f D
-edit 68b51d5 E
-Finally, remove the line that you want, commit your changes and use git rebase --continue to go on.
+    git tag -a release-v1.0
+    git push origin tag release-v1.0
 
-: change remote repo
-git remote set-url origin https://github.com/trist007/darkterminal.git
+* remove an old commit and git rebase::
 
-: show hidden chars in git diff white space errors
-git diff --ws-error-highlight=all
+    You can try with git rebase -i.
 
-: handle new line chars cross platform
-git config --global core.autocrlf true
+    Following the example you used in your question and assuming A is in the remote repo but B, C, D and E are not, after using git rebase you will get an screen like this:
+
+    pick 67a8df7 B
+    pick 47a6947 C
+    pick a55540f D
+    pick 68b51d5 E
+
+    Then you will need to edit commit E line like this:
+
+    pick 67a8df7 B
+    pick 47a6947 C
+    pick a55540f D
+    edit 68b51d5 E
+
+    Finally, remove the line that you want, commit your changes and use git rebase --continue to go on.
+
+* change remote repo::
+
+    git remote set-url origin https://github.com/trist007/darkterminal.git
+
+* show hidden chars in git diff white space errors::
+
+    git diff --ws-error-highlight=all
+
+* handle new line chars cross platform::
+
+    git config --global core.autocrlf true
