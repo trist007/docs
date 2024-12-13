@@ -22,6 +22,7 @@ documentation for details.
    cpp
    cmake
    premake
+   ide
 
 .. note::
    This documentation is currently under active development
