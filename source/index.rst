@@ -20,6 +20,10 @@ documentation for details.
    assembly
    c
    cpp
+   python
+   lua
+   bash
+   vim
    cmake
    premake
    git
