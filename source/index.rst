@@ -24,6 +24,7 @@ documentation for details.
    premake
    git
    ide
+   sphinx
 
 .. note::
    This documentation is currently under active development
