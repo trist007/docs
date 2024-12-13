@@ -9,19 +9,20 @@
 project = 'programming docs'
 copyright = '2024, trist007'
 author = 'trist007'
-release = '0.1'
+release = '0.2'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+
+extensions = ["sphinx_rtd_dark_mode"]
 
 templates_path = ['_templates']
 exclude_patterns = ['sphinx_rtd_theme']
 
 import sphinx_rtd_theme
 
-
+default_dark_mode = True
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
