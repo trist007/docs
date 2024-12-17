@@ -21,9 +21,9 @@ Bash
 
         OUTPUT=$(aws sts assume-role --role-arn arn:aws:iam:::$1:role/ca-iam-cie-engineer --role-session-name 5000000 | egrep 'AccessKeyId|SecretAccessKey|SessionToken')
 
-        ACCESS_KEY=$(echo $OUTPUT | cutt -d '"' -f4)
-        SECRET_KEY=$(echo $OUTPUT | cutt -d '"' -f8)
-        SESSION_TOK=$(echo $OUTPUT | cutt -d '"' -f12)
+        ACCESS_KEY=$(echo $OUTPUT | cut -d '"' -f4)
+        SECRET_KEY=$(echo $OUTPUT | cut -d '"' -f8)
+        SESSION_TOK=$(echo $OUTPUT | cut -d '"' -f12)
 
         aws describe-instances | grep InstanceId | wc -l >> $FILE
         aws describe-volumes | grep -B1 Sieze | grep VolumeId | wc -l >> $FILE
