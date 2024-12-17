@@ -24,3 +24,9 @@ CMake build options
 
     cmake -DCMAKE_CXX_COMPILER=/usr/bin/clang++
     cmake -DCMAKE_C_COMPILER=/usr/bin/gcc
+
+* use Debug mode to see verbose output
+
+.. code-block:: cpp
+
+    cmake -DCMAKE_BUILD_TYPE=Debug ../
