@@ -26,6 +26,8 @@ documentation for details.
    vim
    cmake
    premake
+   make
+   ninja
    git
    ide
    sphinx
