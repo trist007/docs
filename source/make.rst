@@ -5,7 +5,13 @@
 make
 ####
 
-* List Makefile targets
+* List Makefile targets the easy way
+
+.. code-block:: cpp
+
+   make help
+
+* List Makefile targets the hard way
 
 .. code-block:: cpp
 
