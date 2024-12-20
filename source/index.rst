@@ -31,6 +31,7 @@ documentation for details.
    git
    ide
    sphinx
+   brew
 
 .. note::
    This documentation is currently under active development
