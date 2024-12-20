@@ -8,7 +8,6 @@ Premake
 * Premake is easier to use than CMake as it supports LUA
 
 * premake5.lua example of darkterminal
-
 .. code-block:: cpp
 
     -- premake5.lua
@@ -168,3 +167,9 @@ Premake
         links { "trantor", "SQLiteCpp", "sqlite3", "ssl", "crypto", "cares", "pthread", "dl" }
         includedirs { "%{prj.location}" }
 
+* Conditional includes
+.. code-block:: cpp
+
+    -- Conditional inclusion of files based on the define USE_EXTRAS
+    filter "defines:USE_EXTRAS"
+        files { "src/extras/**.h", "src/extras/**.cpp" }
