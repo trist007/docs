@@ -20,7 +20,7 @@ documentation for details.
    assembly
    c
    cpp
-   python
+   cython
    lua
    bash
    vim
