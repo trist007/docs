@@ -5,4 +5,8 @@
 C
 ##
 
-* Tips for C
+* Macros
+.. code-block:: cpp
+
+   __FILE__         // inserts current file
+   __LINE__         // inserts current line
