@@ -22,3 +22,6 @@ help:
 push:
 	rsync -rvaz build/html/* darkterminal.net:/data/www/html/darkterminal.net/docs/
 	#scp -r build/html/* darkterminal.net:/data/www/html/darkterminal.net/docs/
+
+fast: clean html push
+
