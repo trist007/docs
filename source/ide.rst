@@ -14,3 +14,9 @@ IDE
 
     defaults write -g ApplePressAndHoldEnabled 0
 
+* how to set a watchpoint expression in VSCODE to view a register value in hexidecimal
+
+..  code-block:: cpp
+    
+    rax,h
+
