@@ -29,6 +29,7 @@ documentation for details.
    make
    ninja
    git
+   git-bash
    ide
    sphinx
    brew
